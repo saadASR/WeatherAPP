@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/weather_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Section City, Temperature, and Weather Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City, Country"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0°C"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weatherDescText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="clear sky"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Centered Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="238dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cloudy_sky" />
+
+        <!-- This LinearLayout takes the remaining space and pushes content to the bottom -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_weight="0" />
+
+        <!-- Section Weather Information: Humidity, Wind Speed, and Visibility (Bottom) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/humidityText"
+                style="@style/WeatherInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity: 0%" />
+
+            <TextView
+                android:id="@+id/windSpeedText"
+                style="@style/WeatherInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wind: 0 km/h" />
+
+            <TextView
+                android:id="@+id/visibilityText"
+                style="@style/WeatherInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visibility: 0 km" />
+        </LinearLayout>
+
+        <!-- Section Additional Information: Feels Like, Sunrise, and Sunset (Bottom) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/feelsLikeText"
+                style="@style/WeatherInfoText"
+                android:text="Feels like: 0°C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/sunriseText"
+                style="@style/WeatherInfoText"
+                android:text="Sunrise: 00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/sunsetText"
+                style="@style/WeatherInfoText"
+                android:text="Sunset: 00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
